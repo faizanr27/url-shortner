@@ -44,7 +44,7 @@ const Signin = () => {
             // setToken(result.token);
     
             // Redirect to a protected route
-            navigate('/home');
+            navigate('/');
     
         } catch (error) {
             console.error('Error during signin:', error);
@@ -56,7 +56,7 @@ const Signin = () => {
       
 
     const handleNavigate = (e) => {
-        navigate('/');
+        navigate('/signup');
       };
 
     return(

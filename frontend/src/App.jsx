@@ -99,8 +99,8 @@
 
 // export default App;
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signup from "./pages/Singup";
-import Signin from "./pages/Signin";
+import Signup from "./pages/singup";
+import Signin from "./pages/signin";
 import ProtectedRoute from "./pages/ProtectedRoute";
 // import Main from "./components/layout/main";
 // import Navbar from "./components/layout/Navbar";
@@ -114,10 +114,10 @@ function App() {
     <Router>
       {/* <Navbar/> */}
       <Routes>
-        <Route path="/" element={<Signup />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route
-          path="/home"
+          path="/"
           element={
             <ProtectedRoute token={token}>
               <Home />

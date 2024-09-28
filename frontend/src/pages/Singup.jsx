@@ -55,7 +55,7 @@ const Signup = () => {
           // setToken(result.token);
     
           // Redirect to a protected route
-          navigate('/home');
+          navigate('/');
   
       } catch (error) {
           console.error('Error during signup:', error);
@@ -108,7 +108,7 @@ const Signup = () => {
     </button>
     <p className="flex justify-center mt-6 text-sm text-black">
       Already have an account?
-      <a href="#signin" className="ml-1 text-sm font-semibold text-slate-700 underline" onClick={handleNavigate}>
+      <a href="#" className="ml-1 text-sm font-semibold text-slate-700 underline" onClick={handleNavigate}>
         Sign In
       </a>
     </p>
