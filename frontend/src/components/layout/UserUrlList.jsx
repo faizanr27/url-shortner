@@ -7,13 +7,15 @@ const UserUrlList = () => {
     const [urls, setUrls] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    
   
     useEffect(() => {
       const fetchUrls = async () => {
         try {
+          const token = localStorage.getItem('token')
           const response = await fetch('https://url-shortner-9eps.onrender.com/api/user/urls', {
             headers: {
-              'Authorization': `${localStorage.getItem('token')}` 
+              'Authorization': `${token}` 
             }
           });
           
