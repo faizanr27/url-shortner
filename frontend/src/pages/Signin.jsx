@@ -55,11 +55,11 @@ const Signin = () => {
       
 
     const handleNavigate = (e) => {
-        navigate('/Signup');
+        navigate('/');
       };
 
     return(
-        <div className="relative flex flex-col font-doodle bg-white shadow-sm border border-slate-200 w-96 rounded-lg my-40 mx-auto" >
+        <div id="signin" className="relative flex flex-col font-doodle bg-white shadow-sm border border-slate-200 w-96 rounded-lg my-40 mx-auto" >
   <div className="relative m-2.5 items-center flex justify-center bg-custom-gray bg-custom-opacity text-white h-24 rounded-md bg-black">
     <h3 className="text-2xl">
       Sign in

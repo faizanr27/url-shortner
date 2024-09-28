@@ -67,7 +67,7 @@ const Signup = () => {
       
 
     const handleNavigate = (e) => {
-        navigate('/');
+        navigate('/signin');
       };
 
     return(
