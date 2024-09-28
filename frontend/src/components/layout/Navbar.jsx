@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import { Button } from "../ui/button";
 
 
 // Navbar component that receives handleSearch function as a prop
@@ -8,6 +9,11 @@ const Navbar = () => {
 
   const navigate = useNavigate()
 
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/signin');
+};
   // Navigate to the home route
   const handleNavigate = () => {
     navigate('/')
@@ -21,13 +27,18 @@ const Navbar = () => {
           <a onClick={handleNavigate} className="text-2xl font-doodle " >Short.sy</a>
         </div>
 
-        <a href="https://github.com/faizanr27">
-          <Avatar>
-            <AvatarImage src="https://avatars.githubusercontent.com/u/143700173?s=96&v=4" />
+        <div className="flex items-center cursor-pointer text-black font-bold gap-5" >
+          {/* <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>FR</AvatarFallback>
-          </Avatar>
-        </a>
-
+          </Avatar> */}
+        <Button 
+                onClick={handleLogout}
+                
+            >
+                Logout
+        </Button>
+        </div>
       </div>
     </div>
   );
