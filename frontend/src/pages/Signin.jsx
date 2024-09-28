@@ -42,8 +42,8 @@ const Signin = () => {
             // Store the token in localStorage
             localStorage.setItem('token', result.token);
     
-            // Redirect to a protected route or dashboard
-            navigate('/');
+            // Redirect to a protected route
+            navigate('/home');
     
         } catch (error) {
             console.error('Error during signin:', error);
