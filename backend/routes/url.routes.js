@@ -109,4 +109,21 @@ router.get('/:url', async (req, res) => {
   }
 });
 
-  module.exports = router;
+router.get('/user/urls', verifyToken, async (req, res) => {
+  try {
+    // Fetch all URLs for the authenticated user
+    const urls = await Url.find({ userId: req.userId })
+      .sort({ createdAt: -1 }) // Sort by creation date, newest first
+      .select('originalUrl shortenedUrl createdAt'); // Select only necessary fields
+
+    // Return the URLs as JSON
+    return res.status(200).json({ urls });
+  } catch (error) {
+    console.error("Error fetching user URLs:", error);
+    return res.status(500).json({ message: "Server error." });
+  }
+});
+
+
+
+module.exports = router;
