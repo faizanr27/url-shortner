@@ -99,8 +99,8 @@
 
 // export default App;
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signup from "./pages/singup";
-import Signin from "./pages/signin";
+import Signup from "./pages/Singup";
+import Signin from "./pages/Signin";
 import ProtectedRoute from "./pages/ProtectedRoute";
 // import Main from "./components/layout/main";
 // import Navbar from "./components/layout/Navbar";
