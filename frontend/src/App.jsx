@@ -107,15 +107,21 @@ import ProtectedRoute from "./pages/ProtectedRoute";
 import Home from "./components/layout/Home";
 
 function App() {
-  const token = localStorage.getItem('token'); // manage authentication state
-  // console.log(token)
+  const [token, setToken] = useState(localStorage.getItem('token'));
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem('token');
+    if (storedToken) {
+      setToken(storedToken);
+    }
+  }, []);
 
   return (
     <Router>
       {/* <Navbar/> */}
       <Routes>
-        <Route path="/" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/" element={<Signup setToken={setToken}/>} />
+        <Route path="/signin" element={<Signin setToken={setToken} />} />
         <Route
           path="/home"
           element={

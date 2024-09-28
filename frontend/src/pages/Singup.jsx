@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
-const Signup = () => {
+const Signup = ({ setToken }) => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -52,6 +52,7 @@ const Signup = () => {
 
           // Store the token in localStorage
           localStorage.setItem('token', result.token);
+          setToken(result.token);
     
           // Redirect to a protected route
           navigate('/home');
