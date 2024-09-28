@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { format } from 'date-fns';
 
 const UserUrlList = () => {
   const [urls, setUrls] = useState([]);
@@ -45,7 +44,6 @@ const UserUrlList = () => {
             <TableRow>
               <TableHead>Original URL</TableHead>
               <TableHead>Shortened URL</TableHead>
-              <TableHead>Created At</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -57,7 +55,7 @@ const UserUrlList = () => {
                     {url.shortenedUrl}
                   </a>
                 </TableCell>
-                <TableCell>{format(new Date(url.createdAt), 'PPP')}</TableCell>
+                {/* <TableCell>{format(new Date(url.createdAt), 'PPP')}</TableCell> */}
               </TableRow>
             ))}
           </TableBody>
