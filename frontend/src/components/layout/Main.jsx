@@ -21,7 +21,7 @@ function Main() {
     if (isValidUrl) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch("http://localhost:5000/api/shorten", {
+        const response = await fetch("https://url-shortner-9eps.onrender.com/api/shorten", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -85,7 +85,7 @@ function Main() {
           <p className="text-black font-extrabold text-xl font-doodle">
             Shortened URL :{" "}
             <a
-              href={uri}
+              href={shortenedUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 font-medium underline font-sans text-md"
