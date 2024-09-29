@@ -105,10 +105,16 @@ import ProtectedRoute from "./pages/ProtectedRoute";
 // import Main from "./components/layout/main";
 // import Navbar from "./components/layout/Navbar";
 import Home from "./components/layout/Home";
+import {useState, useEffect} from 'react'
 
 function App() {
-  const token = localStorage.getItem('token'); // manage authentication state
-  // console.log(token)
+  // const token = localStorage.getItem('token'); // manage authentication state
+  // // console.log(token)
+    const [token, setToken] = useState(localStorage.getItem('token'));
+
+  useEffect(() => {
+    setToken(localStorage.getItem('token')); // Update the token state when localStorage changes
+  }, []);
 
   return (
     <Router>
