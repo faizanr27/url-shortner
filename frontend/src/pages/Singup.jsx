@@ -108,7 +108,7 @@ const Signup = () => {
     </button>
     <p className="flex justify-center mt-6 text-sm text-black">
       Already have an account?
-      <a href="#" className="ml-1 text-sm font-semibold text-slate-700 underline" onClick={handleNavigate}>
+      <a  className="ml-1 text-sm font-semibold text-slate-700 underline" onClick={handleNavigate}>
         Sign In
       </a>
     </p>

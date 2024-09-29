@@ -60,7 +60,7 @@ const Signin = () => {
       };
 
     return(
-        <div id="signin" className="relative flex flex-col font-doodle bg-white shadow-sm border border-slate-200 w-96 rounded-lg my-40 mx-auto" >
+        <div  className="relative flex flex-col font-doodle bg-white shadow-sm border border-slate-200 w-96 rounded-lg my-40 mx-auto" >
   <div className="relative m-2.5 items-center flex justify-center bg-custom-gray bg-custom-opacity text-white h-24 rounded-md bg-black">
     <h3 className="text-2xl">
       Sign in
@@ -104,7 +104,7 @@ const Signin = () => {
     </button>
     <p className="flex justify-center mt-6 text-sm text-slate-600">
       Don't have an account?
-      <a href="#" className="ml-1 text-sm font-semibold text-slate-700 underline" onClick={handleNavigate}>
+      <a className="ml-1 text-sm font-semibold text-slate-700 underline" onClick={handleNavigate}>
         Sign Up
       </a>
     </p>
