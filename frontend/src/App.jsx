@@ -114,8 +114,8 @@ function App() {
     <Router>
       {/* <Navbar/> */}
       <Routes>
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="signin" element={<Signin />} />
         <Route
           path="/"
           element={
