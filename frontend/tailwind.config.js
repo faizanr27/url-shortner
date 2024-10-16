@@ -8,7 +8,7 @@ export default {
   theme: {
   	extend: {
 		fontFamily: {
-			'doodle': ['Rubik Doodle Shadow', 'system-ui'],
+			'doodle': ['Roboto Mono', 'monospace'],
 		  },
   		borderRadius: {
   			lg: 'var(--radius)',
