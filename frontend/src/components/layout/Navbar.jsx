@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 
 // Navbar component that receives handleSearch function as a prop
-const Navbar = () => {
+const Navbar = ({setShowUrlList, showUrlList}) => {
 
   const navigate = useNavigate()
 
@@ -18,6 +18,10 @@ const Navbar = () => {
   const handleNavigate = () => {
     navigate('/')
   }
+
+  const handleToggleView = () => {
+    setShowUrlList(!showUrlList);
+  };
 
   return (
     <div className="w-full   px-4 sm:px-6 lg:px-8 bg-gray-100">
@@ -32,9 +36,14 @@ const Navbar = () => {
           <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>FR</AvatarFallback>
           </Avatar> */}
-        <Button 
+        <Button
+               onClick={handleToggleView}
+            >
+                URLs
+        </Button>
+        <Button
                 onClick={handleLogout}
-                
+
             >
                 Logout
         </Button>

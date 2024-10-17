@@ -46,12 +46,12 @@ function Main() {
   };
 
   return (
-    <div className="bg-gray-100 flex flex-col justify-center items-center font-handwriting">
-      <h1 className="text-5xl font-extrabold text-center text-black mb-8 font-doodle">URL Shortener</h1>
+    <div className="bg-gray-100 flex flex-col justify-center items-center font-handwriting mt-48">
+      <h1 className="text-5xl font-extrabold text-center text-black mb-8 font-doodle">Shorten Your Links</h1>
       <div className="w-full max-w-md bg-gray-50 rounded-lg shadow-md p-8 space-y-6 border border-gray-200 border-dashed">
-        <h2 className="text-3xl font-extrabold font-doodle text-center text-black mb-8">
+        {/* <h2 className="text-3xl font-extrabold font-doodle text-center text-black mb-8">
           Short.sy: Your Free URL Shortener
-        </h2>
+        </h2> */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
             className="w-full rounded-lg py-3 px-4 bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 transition duration-300 ease-in-out font-handwriting"
