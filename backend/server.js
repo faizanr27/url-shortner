@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 4000;
 const corsOptions = {
     origin: 'https://shrtsy.vercel.app',
     allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true, 
 };
 
 app.use(cors(corsOptions));
