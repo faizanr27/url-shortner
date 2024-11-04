@@ -13,7 +13,7 @@ const UserUrlList = () => {
       const fetchUrls = async () => {
         try {
           const token = localStorage.getItem('token')
-          const response = await fetch('https://url-shortner-9eps.onrender.com/user/urls', {
+          const response = await fetch('https://shortsy.xyz/user/urls', {
             headers: {
               'Authorization': `${token}`
             }
