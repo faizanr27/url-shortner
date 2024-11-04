@@ -17,7 +17,9 @@ const corsOptions = {
     'https://shrtsy.vercel.app/signup',
   ],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true, 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
+    credentials: true  
+
 };
 
 app.use(cors(corsOptions));
