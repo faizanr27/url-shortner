@@ -12,9 +12,7 @@ const PORT = process.env.PORT || 4000;
 
 const corsOptions = {
   origin: [
-    'https://shrtsy.vercel.app',
-    'https://shrtsy.vercel.app/signin',
-    'https://shrtsy.vercel.app/signup',
+    'https://shrtsy.vercel.app/',
   ],
     allowedHeaders: ['Content-Type', 'Authorization'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
