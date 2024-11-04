@@ -35,7 +35,7 @@ const Signup = () => {
   
       console.log('Data to be sent:', formData);
       try {
-          const response = await fetch('https://shortsy.xyz/api/authRoutes/signup', {
+          const response = await fetch('https://www.shortsy.xyz/api/authRoutes/signup', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json', // Set the content type to JSON
