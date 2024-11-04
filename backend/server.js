@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const corsOptions = {
-    origin: 'https://url-shortner-azure-six.vercel.app',
+    origin: 'https://shrtsy.vercel.app/',
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
