@@ -11,17 +11,15 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const corsOptions = {
-  origin: [
-    'https://shrtsy.vercel.app/',
-  ],
+    origin: 'http://shrtsy.vercel.app',
     allowedHeaders: ['Content-Type', 'Authorization'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
-    credentials: true  
+    // methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
+    // credentials: true  
 
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+// app.options('*', cors(corsOptions));
 app.use(express.json())
 
 // Database Connection
