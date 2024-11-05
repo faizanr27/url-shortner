@@ -21,7 +21,7 @@ function Main() {
     if (isValidUrl) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch("https://www.shortsy.xyz/api/shorten", {
+        const response = await fetch("https://shortsy-fc0l.onrender.com/api/shorten", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
