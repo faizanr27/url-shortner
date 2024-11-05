@@ -11,10 +11,10 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const corsOptions = {
-    origin: 'http://shrtsy.vercel.app',
+    origin: 'https://shrtsy.vercel.app/',
     allowedHeaders: ['Content-Type', 'Authorization'],
-    // methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
-    // credentials: true  
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  
+    credentials: true  
 
 };
 
