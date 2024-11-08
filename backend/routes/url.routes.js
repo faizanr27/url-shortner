@@ -67,7 +67,7 @@ router.post('/api/shorten', verifyToken, async(req, res) => {
     }
     else{
       const randomString = makeid();
-      const shortenedUrl = `${req.protocol}://${req.get('host')}/${randomString}`;
+      const shortenedUrl = `${req.get('host')}/${randomString}`;
 
       const newUrl = new Url({
         shortenedUrl,
